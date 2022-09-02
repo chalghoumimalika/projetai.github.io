@@ -130,22 +130,22 @@ var vic=new Array()
 var vocab
 var words
 var json
-function getJSON(url) {
-  var resp ;
-  var xmlHttp ;
+// function getJSON(url) {
+//   var resp ;
+//   var xmlHttp ;
 
-  resp  = '' ;
-  xmlHttp = new XMLHttpRequest();
+//   resp  = '' ;
+//   xmlHttp = new XMLHttpRequest();
 
-  if(xmlHttp != null)
-  {
-      xmlHttp.open( "GET", url, false );
-      xmlHttp.send( null );
-      resp = xmlHttp.responseText;
-  }
+//   if(xmlHttp != null)
+//   {
+//       xmlHttp.open( "GET", url, false );
+//       xmlHttp.send( null );
+//       resp = xmlHttp.responseText;
+//   }
 
-  return resp ;
-}
+//   return resp ;
+// }
 
 
 // import * as tf from '@tensorflow/tfjs';
@@ -160,7 +160,10 @@ async function init() {
     
     console.log("model loaded..");
     // vocab = JSON.parse(getJSON('../MODEL/tokenizer.json')); 
-    vocab = JSON.parse(getJSON('../MODEL/tokenizer.json'));  
+    //vocab = JSON.parse(getJSON('../MODEL/tokenizer.json')); 
+    $.getJSON("../MODEL/tokenizer.json", function(json) {
+    console.log(json); // this will show the info it in firebug console
+     });
       
   }
   function TokenisationAndPadding(text) {
