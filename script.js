@@ -143,13 +143,13 @@ async function init() {
     console.log("model loaded..");
     // vocab = JSON.parse(getJSON('../MODEL/tokenizer.json')); 
     //vocab = JSON.parse(getJSON('../MODEL/tokenizer.json')); 
-//     $.getJSON("../MODEL/tokenizer.json", function(json) {
-//      vocab=json
-//     console.log(json); // this will show the info it in firebug console
-//      });
-  fetch("../MODEL/tokenizer.json")
-   .then(response => response.json())
-   .then(json => console.log(json));
+    $.getJSON("MODEL/tokenizer.json", function(json) {
+     vocab=json
+    console.log(json); // this will show the info it in firebug console
+     });
+//   fetch("../MODEL/tokenizer.json")
+//    .then(response => response.json())
+//    .then(json => console.log(json));
       
   }
   function TokenisationAndPadding(text) {
