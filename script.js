@@ -141,16 +141,9 @@ async function init() {
     modelgru = await tf.loadLayersModel('./MODEL/model_gru/model.json');
     
     console.log("model loaded..");
-    // vocab = JSON.parse(getJSON('../MODEL/tokenizer.json')); 
-    //vocab = JSON.parse(getJSON('../MODEL/tokenizer.json')); 
-//     $.getJSON("MODEL/tokenizer.json", function(json) {
-//      vocab=json
-//     console.log(json); // this will show the info it in firebug console
-//      });
-
     const response = await fetch("./MODEL/tokenizer.json");
     const json = await response.json();
-    console.log(json);
+    vocab=json
 
       
   }
