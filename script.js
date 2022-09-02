@@ -162,6 +162,7 @@ async function init() {
     // vocab = JSON.parse(getJSON('../MODEL/tokenizer.json')); 
     //vocab = JSON.parse(getJSON('../MODEL/tokenizer.json')); 
     $.getJSON("../MODEL/tokenizer.json", function(json) {
+     vocab=json
     console.log(json); // this will show the info it in firebug console
      });
       
