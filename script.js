@@ -143,7 +143,7 @@ async function init() {
     console.log("model loaded..");
     const response = await fetch("./MODEL/tokenizer.json");
     const json = await response.json();
-    vocab=json
+    vocab=JSON.parse(json)
 
       
   }
