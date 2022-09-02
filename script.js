@@ -130,25 +130,7 @@ var vic=new Array()
 var vocab
 var words
 var json
-// function getJSON(url) {
-//   var resp ;
-//   var xmlHttp ;
 
-//   resp  = '' ;
-//   xmlHttp = new XMLHttpRequest();
-
-//   if(xmlHttp != null)
-//   {
-//       xmlHttp.open( "GET", url, false );
-//       xmlHttp.send( null );
-//       resp = xmlHttp.responseText;
-//   }
-
-//   return resp ;
-// }
-
-
-// import * as tf from '@tensorflow/tfjs';
 async function init() {
   
     model = undefined;
