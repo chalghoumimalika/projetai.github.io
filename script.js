@@ -129,6 +129,7 @@ class Tokenizer {
 /* Loads trained model */
 var vic=new Array()
 var vocab
+var vocab2
 var words
 var json
 
@@ -144,6 +145,7 @@ async function init() {
     console.log("model loaded..");
     const response = await fetch("./MODEL/tokenizer.json");
     const json = await response.json();
+    vocab2=json
     vocab=JSON.parse(json)
 
       
