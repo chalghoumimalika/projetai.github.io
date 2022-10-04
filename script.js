@@ -151,7 +151,7 @@ async function init() {
       
   }
   function TokenisationAndPadding(text) {
-    const tokenizer = tokenizerFromJson(json)
+    const tokenizer = tokenizerFromJson(vocab2)
     console.log(tokenizer.word_counts['hotel'])
     tokenizer.fitOnTexts(text);
     let values = tokenizer.textsToSequences(text);    
