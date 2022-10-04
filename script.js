@@ -108,7 +108,7 @@ class Tokenizer {
   function tokenizerFromJson(json_string) {
     
     const tokenizer = new Tokenizer();
-    const js = JSON.parse(json_string);
+//     const js = JSON.parse(json_string);
     // console.log("here in toke",js.config.word_counts["hotel"])
 
     tokenizer.word_index = JSON.parse(js.config.word_index);
