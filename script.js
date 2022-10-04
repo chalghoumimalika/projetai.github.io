@@ -108,7 +108,8 @@ class Tokenizer {
   function tokenizerFromJson(json_string) {
     
     const tokenizer = new Tokenizer();
-//     const js = JSON.parse(json_string);
+    const js = JSON.parse(json_string);
+   
     // console.log("here in toke",js.config.word_counts["hotel"])
 
     tokenizer.word_index = JSON.parse(js.config.word_index);
@@ -148,7 +149,7 @@ async function init() {
       
   }
   function TokenisationAndPadding(text) {
-    const tokenizer = tokenizerFromJson(vocab)
+    const tokenizer = tokenizerFromJson(json)
     console.log(tokenizer.word_counts['hotel'])
     tokenizer.fitOnTexts(text);
     let values = tokenizer.textsToSequences(text);    
